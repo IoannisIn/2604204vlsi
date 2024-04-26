@@ -32,6 +32,15 @@ module tt_um_ioannisin_example (
     assign uio_oe  = 8'b0; // Example: uio_oe is not used, so assigning it to 0
 
     // Your logic here (if any), using clk and rst_n
-    assign y = s[1] ? (s[0] ? d : c) : (s[0] ? b : a);
-    
+    //assign y = s[1] ? (s[0] ? d : c) : (s[0] ? b : a);
+
+    always @(*) begin
+            case (s)
+                2'h0: y = a;
+                2'h1: y = b;
+                2'h2: y = c;
+                2'h3: y = d;
+                default: y = 0;
+            endcase
+        end   
 endmodule
