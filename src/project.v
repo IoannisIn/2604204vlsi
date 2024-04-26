@@ -16,9 +16,22 @@ module tt_um_ioannisn_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    wire ui_in[0] = a;
+    wire ui_in[1] = b;
+    wire ui_in[2] = c;
+    wire ui_in[3] = d;
+    wire ui_in[4] = s[0];
+    wire ui_in[5] = s[1];
+    wire ui_in[6] = e;
+    wire ui_in[7] = f;
+
+    assign uo_out[0] = y;
+    assign uo_out[7:1] = 7'b0;
+    
   // All output pins must be assigned. If not used, assign to 0.
   assign uo_out  = ui_in + uio_in;  // Example: ou_out is the sum of ui_in and uio_in
   assign uio_out = 0;
   assign uio_oe  = 0;
+    
 
 endmodule
