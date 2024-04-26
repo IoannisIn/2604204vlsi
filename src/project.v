@@ -16,23 +16,21 @@ module tt_um_ioannisin_example (
     input  wire       rst_n     // reset_n - low to reset
 );
 
+    // Declare internal signals
+    wire a, b, c, d, e, f;
+    wire [1:0] s;
+
     // Assigning dedicated inputs to internal signals
-    assign ui_in[0] = a;
-    assign ui_in[1] = b;
-    assign ui_in[2] = c;
-    assign ui_in[3] = d;
-    assign ui_in[4] = s[0];
-    assign ui_in[5] = s[1];
-    assign ui_in[6] = e;
-    assign ui_in[7] = f;
+    assign {a, b, c, d, s, e, f} = ui_in;
 
     // Assigning dedicated outputs
-    assign y = uo_out[0];
+    assign uo_out[0] = y;
     assign uo_out[7:1] = 7'b0;  // Setting other bits to 0
     
     // All output pins must be assigned. If not used, assign to 0.
     assign uio_out = 8'b0; // Example: uio_out is not used, so assigning it to 0
     assign uio_oe  = 8'b0; // Example: uio_oe is not used, so assigning it to 0
 
+    // Your logic here (if any), using clk and rst_n
 
 endmodule
