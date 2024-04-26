@@ -17,7 +17,7 @@ module tt_um_ioannisin_example (
 );
 
     // Declare internal signals
-    wire a, b, c, d, e, f;
+    wire a, b, c, d, e, f, y;
     wire [1:0] s;
 
     // Assigning dedicated inputs to internal signals
