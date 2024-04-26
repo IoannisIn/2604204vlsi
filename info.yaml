@@ -26,8 +26,8 @@ pinout:
   ui[3]: "d"
   ui[4]: "s[1]"
   ui[5]: "s[2]"
-  ui[6]: ""
-  ui[7]: ""
+  ui[6]: "e"
+  ui[7]: "f"
 
   # Outputs
   uo[0]: "y"
